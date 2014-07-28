@@ -1,0 +1,33 @@
+digraph ggg {
+	subgraph cluster0 {
+		//我是一个子图，subgraph定义了我，
+		node[style = filled, color = white];
+		//我之内的节点都是这种样式
+		style = filled;
+		//我的样式是填充
+		color = lightgrey;
+		//我的颜色
+		a0->a1->a2->a3;
+		label = "prcess #1"
+		//我的标题
+	}
+
+	subgraph cluster1 {
+		//我也是一个子图
+		node[style = filled];
+		b0->b1->b2->b3;
+		label = "process #2";
+		color = blue;
+	}
+
+	//定义完毕之后，下面还是连接了
+	start->a0;
+	start->b0;
+	a1->b3;
+	b2->a3;
+	a3->end;
+	b3->end;
+	
+	start[shape=Mdiamond];
+	end[shape=Msquare];
+}
