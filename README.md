@@ -24,3 +24,6 @@ graphviz
 			
 			   node[label ="<f0> | <f1> G | <f2> "];  // 三列一行的表，表示树中的叶子节点
 			   "node0": f2->"node4":f1;     // node0中的f2列指向node4中的f1列
+子图：
+
+			   subgraph <图id> {}
